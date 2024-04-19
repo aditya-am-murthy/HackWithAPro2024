@@ -56,7 +56,7 @@ export default function Page() {
           class="flex flex-col items-start py-12 pr-20 pl-9 rounded-3xl shadow-sm bg-white bg-opacity-50 max-md:px-5 max-md:max-w-full"
         >
           <div class="text-base tracking-wide leading-6 text-black max-md:ml-1">
-          How would you rate your overall happiness today?
+          {q1}
           </div>
           <MultipleChoice setAns={setAns1} id={"happiness"} />
           {/* <div
@@ -68,7 +68,7 @@ export default function Page() {
           class="flex flex-col items-start py-12 pr-20 pl-9 mt-11 rounded-3xl shadow-sm bg-white bg-opacity-50 max-md:px-5 max-md:mt-10 max-md:max-w-full"
         >
           <div class="text-base tracking-wide leading-6 text-black max-md:ml-1">
-            How would you rate your stress levels today?           
+            {q2}
           </div>
           <MultipleChoice setAns={setAns2} id={"stress"} />
         </div>
@@ -76,7 +76,7 @@ export default function Page() {
           class="flex flex-col items-start py-12 pr-20 pl-9 mt-11 rounded-3xl shadow-sm bg-white bg-opacity-50 max-md:px-5 max-md:mt-10 max-md:max-w-full"
         >
           <div class="text-base tracking-wide leading-6 text-black max-md:ml-1">
-            How motivated do you feel today? (1=worst, 5=best)          
+            {q3}
           </div>
           <MultipleChoice setAns={setAns3} id={"motivated"} />
         </div>
@@ -84,7 +84,7 @@ export default function Page() {
           class="flex flex-col items-start py-12 pr-20 pl-9 mt-11 rounded-3xl shadow-sm bg-white bg-opacity-50 max-md:px-5 max-md:mt-10 max-md:max-w-full"
         >
           <div class="text-base tracking-wide leading-6 text-black max-md:ml-1">
-          How well do you manage your work-life balance? (1=worst, 5=best)         
+          {q4}
           </div>
           <MultipleChoice setAns={setAns4} id={"manage"} />
         </div>
@@ -94,7 +94,7 @@ export default function Page() {
           class="flex flex-col items-start py-12 pr-20 pl-9 mt-11 rounded-3xl shadow-sm bg-white bg-opacity-50 max-md:px-5 max-md:mt-10 max-md:max-w-full"
         >
           <div class="text-base tracking-wide leading-6 text-black max-md:ml-1">
-          How do you feel confident about achieving your study goal? (1=worst, 5=best)
+          {q5}
           </div>
           <MultipleChoice setAns={setAns5} id={"confident"} />
           <div
