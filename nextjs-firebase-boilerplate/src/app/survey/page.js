@@ -11,6 +11,9 @@ export default function Page() {
     const [ans1, setAns1] = useState("");
     const [ans2, setAns2] = useState("");
     const [ans3, setAns3] = useState("");
+    const [ans4, setAns4] = useState("");
+    const [ans5, setAns5] = useState("");
+    const [ans6, setAns6] = useState("");
     const router = useRouter();
   
     const q1 = "1. How would you rate your overall happiness today? (1=worst, 5=best)";
@@ -20,7 +23,7 @@ export default function Page() {
     const q5 = "5. How do you feel confident about achieving your study goal? (1=worst, 5=best)";
     const q6 = "6. Anything you wanna add?";
     
-    // console.log(ans6);
+    console.log(ans1);
 
 
     function compile_data() {
@@ -55,121 +58,35 @@ export default function Page() {
           <div class="text-base tracking-wide leading-6 text-black max-md:ml-1">
           How would you rate your overall happiness today?
           </div>
-          <div class="flex gap-5 mt-4 max-md:flex-wrap max-md:pr-5">
-            <div>
-              <input type="radio" name="happiness" class="shrink-0 bg-black rounded-full h-[25px] w-[25px]" />
-              <div class="text-center"><label>1</label></div>
-            </div>
-            <div>
-              <input type="radio" name="happiness" class="shrink-0 bg-black rounded-full h-[25px] w-[25px]" />
-              <div class="text-center"><label>2</label></div>
-            </div>
-            <div>
-              <input type="radio" name="happiness" class="shrink-0 bg-black rounded-full h-[25px] w-[25px]" />
-              <div class="text-center"><label>3</label></div>
-            </div>
-            <div>
-              <input type="radio" name="happiness" class="shrink-0 bg-black rounded-full h-[25px] w-[25px]" />
-              <div class="text-center"><label>4</label></div>
-            </div>
-            <div>
-              <input type="radio" name="happiness" class="shrink-0 bg-black rounded-full h-[25px] w-[25px]" />
-              <div class="text-center"><label>5</label></div>
-            </div>
- 
- 
-          </div>
-          <div
+          <MultipleChoice setAns={setAns1} id={"happiness"} />
+          {/* <div
             class="flex gap-5 justify-between mt-2 ml-3 max-w-full text-xs tracking-wide leading-4 text-black whitespace-nowrap w-[255px] max-md:ml-2.5"
           >
-          </div>
+          </div> */}
                  </div>
         <div
           class="flex flex-col items-start py-12 pr-20 pl-9 mt-11 rounded-3xl shadow-sm bg-white bg-opacity-50 max-md:px-5 max-md:mt-10 max-md:max-w-full"
         >
           <div class="text-base tracking-wide leading-6 text-black max-md:ml-1">
-            How would you rate your stress levels today?           </div>
-          <div class="flex gap-5 mt-4 max-md:flex-wrap max-md:pr-5">
-            <div>
-              <input type="radio" name="stress" class="shrink-0 bg-black rounded-full h-[25px] w-[25px]" />
-              <div class="text-center"><label>1</label></div>
-            </div>
-            <div>
-              <input type="radio" name="stress" class="shrink-0 bg-black rounded-full h-[25px] w-[25px]" />
-              <div class="text-center"><label>2</label></div>
-            </div>
-            <div>
-              <input type="radio" name="stress" class="shrink-0 bg-black rounded-full h-[25px] w-[25px]" />
-              <div class="text-center"><label>3</label></div>
-            </div>
-            <div>
-              <input type="radio" name="stress" class="shrink-0 bg-black rounded-full h-[25px] w-[25px]" />
-              <div class="text-center"><label>4</label></div>
-            </div>
-            <div>
-              <input type="radio" name="stress" class="shrink-0 bg-black rounded-full h-[25px] w-[25px]" />
-              <div class="text-center"><label>5</label></div>
+            How would you rate your stress levels today?           
           </div>
-            </div>
- 
- 
+          <MultipleChoice setAns={setAns2} id={"stress"} />
         </div>
         <div
           class="flex flex-col items-start py-12 pr-20 pl-9 mt-11 rounded-3xl shadow-sm bg-white bg-opacity-50 max-md:px-5 max-md:mt-10 max-md:max-w-full"
         >
           <div class="text-base tracking-wide leading-6 text-black max-md:ml-1">
-            How motivated do you feel today? (1=worst, 5=best)           </div>
-          <div class="flex gap-5 mt-4 max-md:flex-wrap max-md:pr-5">
-            <div>
-              <input type="radio" name="motivated" class="shrink-0 bg-black rounded-full h-[25px] w-[25px]" />
-              <div class="text-center"><label>1</label></div>
-            </div>
-            <div>
-              <input type="radio" name="motivated" class="shrink-0 bg-black rounded-full h-[25px] w-[25px]" />
-              <div class="text-center"><label>2</label></div>
-            </div>
-            <div>
-              <input type="radio" name="motivated" class="shrink-0 bg-black rounded-full h-[25px] w-[25px]" />
-              <div class="text-center"><label>3</label></div>
-            </div>
-            <div>
-              <input type="radio" name="motivated" class="shrink-0 bg-black rounded-full h-[25px] w-[25px]" />
-              <div class="text-center"><label>4</label></div>
-            </div>
-            <div>
-              <input type="radio" name="motivated" class="shrink-0 bg-black rounded-full h-[25px] w-[25px]" />
-              <div class="text-center"><label>5</label></div>
+            How motivated do you feel today? (1=worst, 5=best)          
           </div>
-            </div>
-          
+          <MultipleChoice setAns={setAns3} id={"motivated"} />
         </div>
         <div
           class="flex flex-col items-start py-12 pr-20 pl-9 mt-11 rounded-3xl shadow-sm bg-white bg-opacity-50 max-md:px-5 max-md:mt-10 max-md:max-w-full"
         >
           <div class="text-base tracking-wide leading-6 text-black max-md:ml-1">
-          How well do you manage your work-life balance? (1=worst, 5=best)          </div>
-          <div class="flex gap-5 mt-4 max-md:flex-wrap max-md:pr-5">
-            <div>
-              <input type="radio" name="manage" class="shrink-0 bg-black rounded-full h-[25px] w-[25px]" />
-              <div class="text-center"><label>1</label></div>
-            </div>
-            <div>
-              <input type="radio" name="manage" class="shrink-0 bg-black rounded-full h-[25px] w-[25px]" />
-              <div class="text-center"><label>2</label></div>
-            </div>
-            <div>
-            <input type="radio" name="manage" class="shrink-0 bg-black rounded-full h-[25px] w-[25px]" />
-              <div class="text-center"><label>3</label></div>
-            </div>
-            <div>
-            <input type="radio" name="manage" class="shrink-0 bg-black rounded-full h-[25px] w-[25px]" />
-              <div class="text-center"><label>4</label></div>
-            </div>
-            <div>
-            <input type="radio" name="conmanagefident" class="shrink-0 bg-black rounded-full h-[25px] w-[25px]" />
-              <div class="text-center"><label>5</label></div>
+          How well do you manage your work-life balance? (1=worst, 5=best)         
           </div>
-            </div>
+          <MultipleChoice setAns={setAns4} id={"manage"} />
         </div>
  
  
@@ -179,34 +96,12 @@ export default function Page() {
           <div class="text-base tracking-wide leading-6 text-black max-md:ml-1">
           How do you feel confident about achieving your study goal? (1=worst, 5=best)
           </div>
-          <div class="flex gap-5 mt-4 max-md:flex-wrap max-md:pr-5">
-            <div>
-              <input type="radio" name="confident" class="shrink-0 bg-black rounded-full h-[25px] w-[25px]" />
-              <div class="text-center"><label>1</label></div>
-            </div>
-            <div>
-            <input type="radio" name="confident" class="shrink-0 bg-black rounded-full h-[25px] w-[25px]" />
-              <div class="text-center"><label>2</label></div>
-            </div>
-            <div>
-            <input type="radio" name="confident" class="shrink-0 bg-black rounded-full h-[25px] w-[25px]" />
-              <div class="text-center"><label>3</label></div>
-            </div>
-            <div>
-            <input type="radio" name="confident" class="shrink-0 bg-black rounded-full h-[25px] w-[25px]" />
-              <div class="text-center"><label>4</label></div>
-            </div>
-            <div>
-            <input type="radio" name="confident" class="shrink-0 bg-black rounded-full h-[25px] w-[25px]" />
-              <div class="text-center"><label>5</label></div>
-          </div>
-            </div>
-          
+          <MultipleChoice setAns={setAns5} id={"confident"} />
           <div
             class="justify-center py-2 mt-7 text-base tracking-wide leading-6 text-purple-500 rounded-lg border border-purple-500 border-solid max-md:max-w-full"
           >
-            additional comments?
-            <br></br>
+            Additional comments?
+            <br/>
       
            <textarea  class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
            placeholder='I also feel myself...' name="Text1" cols="40" rows="5"></textarea>

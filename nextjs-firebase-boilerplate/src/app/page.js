@@ -33,17 +33,15 @@ export default function Home() {
 
 
             <div
-              class="justify-center self-center px-14 py-6 mt-10 text-xl tracking-wide text-white whitespace-nowrap bg-black shadow-sm rounded-[30.5px] max-md:px-5 max-md:mt-10"
+              class="justify-center z-10 self-center px-14 py-6 mt-10 text-xl tracking-wide text-white whitespace-nowrap bg-black shadow-sm rounded-[30.5px] max-md:px-5 max-md:mt-10"
             >
               {/*Link to survey*/}
               <Link
                 href="/survey"
-                className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-                target="_blank"
+                className="group rounded-lg z-10 border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
+
                 rel="noopener noreferrer"
               >
-
-
                 continue
               </Link>
             </div>

@@ -1,21 +1,33 @@
 import React from "react";
 
-export default function MultipleChoice({setAns, id}) {
+const MultipleChoice = ({setAns, id}) => {
+
+    const val = "shrink-0 bg-black rounded-full h-[25px] w-[25px]";
 
     return (  
-        <>
-            <br />
-            <input type="radio" id="huey" name={id} value="huey" onClick={(e) => setAns(1)} />
-            <label for="huey" class="blue-text">1</label>
-            <input type="radio" id="huey" name={id} value="huey" onClick={(e) => setAns(2)} />
-            <label for="huey" class="blue-text">2</label>
-            <input type="radio" id="huey" name={id} value="huey" onClick={(e) => setAns(3)} />
-            <label for="huey" class="blue-text">3</label>
-            <input type="radio" id="huey" name={id} value="huey" onClick={(e) => setAns(4)} />
-            <label for="huey" class="blue-text">4</label>
-            <input type="radio" id="huey" name={id} value="huey" onClick={(e) => setAns(5)} />
-            <label for="huey" class="blue-text">5</label>
-            <br />
-        </>
+        <div class="flex gap-5 mt-4 max-md:flex-wrap max-md:pr-5">
+        <div>
+          <input type="radio" name={id} className={val} onClick={(e) => setAns('1')} />
+          <div class="text-center"><label>1</label></div>
+        </div>
+        <div>
+          <input type="radio" name={id} className={val} onClick={(e) => setAns('2')} />
+          <div class="text-center"><label>2</label></div>
+        </div>
+        <div>
+          <input type="radio" name={id} className={val} onClick={(e) => setAns('3')}/>
+          <div class="text-center"><label>3</label></div>
+        </div>
+        <div>
+          <input type="radio" name={id} className={val} onClick={(e) => setAns('4')}/>
+          <div class="text-center"><label>4</label></div>
+        </div>
+        <div>
+          <input type="radio" name={id} className={val} onClick={(e) => setAns('5')}/>
+          <div class="text-center"><label>5</label></div>
+        </div>
+      </div>
     );
 }
+
+export default MultipleChoice;
